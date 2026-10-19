@@ -4,62 +4,39 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Reeve Labs</title>
-<meta name="description" content="Reeve Labs builds Stepper, execution infrastructure for systematic strategies that span decentralised and centralised crypto venues.">
+<meta name="description" content="Reeve Labs builds Stepper, execution infrastructure for systematic crypto strategies that span decentralised and centralised venues.">
 <style>
-  :root{--bg:#0f1115;--fg:#e8e6e1;--mute:#9a9890;--line:#262a33;--acc:#d9b96a;--max:720px}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
-  main{max-width:var(--max);margin:0 auto;padding:72px 24px 96px}
-  header{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:64px}
-  .brand{font-weight:600;letter-spacing:.02em}
-  .brand small{display:block;color:var(--mute);font-weight:400;font-size:14px}
-  nav a{color:var(--mute);text-decoration:none;margin-left:20px;font-size:15px}
-  nav a:hover{color:var(--fg)}
-  h1{font-size:34px;line-height:1.2;font-weight:600;margin:0 0 20px;letter-spacing:-.01em}
-  h1 em{font-style:normal;color:var(--acc)}
-  p.lead{font-size:20px;color:var(--fg);margin:0 0 56px}
-  h2{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--mute);font-weight:600;margin:56px 0 16px;padding-top:24px;border-top:1px solid var(--line)}
-  p{margin:0 0 16px;color:#cfccc4}
-  ul{padding-left:0;list-style:none;margin:0}
-  li{padding:14px 0;border-bottom:1px solid var(--line)}
-  li:last-child{border-bottom:0}
-  li b{display:block;color:var(--fg);font-weight:600;margin-bottom:2px}
-  footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
-  footer a{color:var(--mute)}
-  a.cta{color:var(--acc)}
-  @media (max-width:520px){h1{font-size:28px}p.lead{font-size:18px}header{flex-direction:column}nav a{margin:0 16px 0 0}}
+  body{margin:0;background:#0f1115;color:#e8e6e1;font:17px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+  main{max-width:640px;margin:0 auto;padding:80px 24px}
+  .brand{font-weight:600;margin-bottom:48px}
+  .brand small{display:block;color:#9a9890;font-weight:400;font-size:14px}
+  h1{font-size:30px;line-height:1.25;font-weight:600;margin:0 0 20px}
+  p{margin:0 0 20px;color:#cfccc4}
+  ul{padding-left:20px;margin:0 0 32px;color:#cfccc4}
+  li{margin-bottom:8px}
+  a{color:#d9b96a}
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid #262a33;color:#9a9890;font-size:14px}
 </style>
 </head>
 <body>
 <main>
-  <header>
-    <div class="brand">Reeve Labs<small>Dublin, Ireland</small></div>
-    <nav><a href="#work">What we do</a><a href="#how">How we work</a><a href="#contact">Contact</a></nav>
-  </header>
+  <div class="brand">Reeve Labs<small>Dublin, Ireland</small></div>
 
-  <h1>Execution infrastructure for strategies that live on <em>both sides</em> of the venue boundary.</h1>
-  <p class="lead">Reeve Labs builds <strong>Stepper</strong>, an engine that screens, executes and reconciles multi-leg crypto strategies spanning permissionless exchanges and regulated ones at the same time.</p>
+  <h1>Execution infrastructure for crypto strategies that span decentralised and centralised venues.</h1>
 
-  <h2 id="work">What we do</h2>
-  <p>Carry and basis trades only pay when every leg is placed on time, hedged on the right venue, and closed before fees eat the edge. Doing that by hand across a DEX and a CEX means stale signals, fat-fingered hedges and no clean number at the end. Stepper replaces the spreadsheet and the one-person script.</p>
+  <p>Reeve Labs builds <strong>Stepper</strong>, an engine for trading teams running carry and basis strategies across a DEX and a CEX at the same time. It replaces the spreadsheet and the one-person script.</p>
+
   <ul>
-    <li><b>Screen</b>Funding and basis compared across venues in one unit. Entry only on settled, sustained signal, never on a prediction or a stale average.</li>
-    <li><b>Execute</b>Bridge, swap, hedge and rebalance as one coordinated position, with each leg sized and sequenced by the engine.</li>
-    <li><b>Reconcile</b>Per-leg cost, funding earned and final result attributed at close. Auditable, repeatable, the same every rotation.</li>
+    <li><strong>Screen</strong> funding and basis across venues in one comparable unit, entering only on settled signal.</li>
+    <li><strong>Execute</strong> every leg, bridge, swap, hedge and rebalance, as one coordinated position.</li>
+    <li><strong>Reconcile</strong> per-leg cost and final result at close, the same way every time.</li>
   </ul>
 
-  <h2 id="how">How we work</h2>
-  <ul>
-    <li><b>Built with trading teams</b>We work with desks and funds already running carry or basis strategies, deploying into their own infrastructure on fixed-fee engagements.</li>
-    <li><b>Non-custodial by design</b>Scoped permissions, propose-and-approve tiers and a client-owned kill switch. We never hold unrestricted keys.</li>
-    <li><b>Proven on our own book first</b>Every strategy runs on our own capital before it runs on anyone else's.</li>
-  </ul>
+  <p>Non-custodial by design. We deploy into your infrastructure on fixed-fee engagements and never hold unrestricted keys. Every strategy runs on our own capital first.</p>
 
-  <h2 id="contact">Contact</h2>
-  <p>Founded 2024 by Philip Tuomey, a blockchain and DeFi engineer. Open source work at <a class="cta" href="https://github.com/0x2me">github.com/0x2me</a>.</p>
-  <p><a class="cta" href="mailto:philip@reevelabs.xyz">philip@reevelabs.xyz</a></p>
+  <p>Founded 2024 by <a href="https://github.com/0x2me">Philip Tuomey</a>. <a href="mailto:philip@reevelabs.xyz">philip@reevelabs.xyz</a></p>
 
-  <footer>Reeve Labs provides software and engineering services. Nothing on this site is investment advice or an offer to manage assets. &copy; 2026 Reeve Labs.</footer>
+  <footer>Reeve Labs provides software and engineering services. Nothing here is investment advice or an offer to manage assets.</footer>
 </main>
 </body>
 </html>
