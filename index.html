@@ -7,6 +7,7 @@
 <meta name="description" content="Reeve Labs builds Stepper, execution infrastructure for systematic crypto strategies that span decentralised and centralised venues.">
 <meta property="og:title" content="Reeve Labs">
 <meta property="og:description" content="Execution infrastructure for crypto strategies that span decentralised and centralised venues.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230a0c10%27 stroke=%27%23d9b96a%27 stroke-width=%272%27/%3E%3Crect x=%2711%27 y=%2711%27 width=%2710%27 height=%2710%27 fill=%27%23d9b96a%27 transform=%27rotate(45 16 16)%27/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -19,7 +20,7 @@
   html,body{height:100%}
   body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   #gl{position:fixed;inset:0;width:100%;height:100%;z-index:0;display:block}
-  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(120% 90% at 50% 0%,rgba(10,12,16,.15) 0%,rgba(10,12,16,.78) 60%,rgba(10,12,16,.95) 100%);pointer-events:none}
+  .veil{position:fixed;inset:0;z-index:1;background:radial-gradient(120% 90% at 50% 0%,rgba(10,12,16,0) 0%,rgba(10,12,16,.45) 55%,rgba(10,12,16,.85) 100%);pointer-events:none}
   main{position:relative;z-index:2;max-width:760px;margin:0 auto;padding:64px 24px 96px}
   header{display:flex;align-items:center;justify-content:space-between;margin-bottom:96px}
   .brand{display:flex;align-items:center;gap:12px;font-weight:600;letter-spacing:.01em}
@@ -100,9 +101,9 @@
   'void main(){vec2 uv=(gl_FragCoord.xy-.5*r)/r.y;float T=t*.045;'+
   'vec2 q=vec2(fbm(uv*1.6+T),fbm(uv*1.6-T*.7));'+
   'float n=fbm(uv*1.3+2.2*q+vec2(T*.3,-T*.2));'+
-  'float band=smoothstep(.25,.95,n)*smoothstep(1.1,-.2,uv.y+.25);'+
+  'float band=smoothstep(.2,.9,n)*smoothstep(1.2,-.3,uv.y+.1);'+
   'vec3 gold=vec3(.85,.72,.42),blue=vec3(.36,.56,.72),base=vec3(.039,.047,.063);'+
-  'vec3 col=base+band*mix(blue,gold,smoothstep(.3,.8,q.x))*.55;'+
+  'vec3 col=base+band*mix(blue,gold,smoothstep(.3,.8,q.x))*1.1;'+
   'col+=.08*fbm(uv*3.+T)*vec3(.9,.8,.6)*band;'+
   'float vig=smoothstep(1.4,.3,length(uv*vec2(.8,1.)));col*=vig;'+
   'gl_FragColor=vec4(col,1.);}';
